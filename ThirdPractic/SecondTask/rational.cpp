@@ -4,7 +4,7 @@
 using namespace std;
 
 
-rational::rational(int a1, int b1) {
+Rational::Rational(int a1, int b1) {
 
     if (b1 == 0) {
         cerr << "Error: denominator cannot be 0." << endl;
@@ -22,13 +22,13 @@ rational::rational(int a1, int b1) {
     reduce();
 }
 
-void rational::set(int a1, int b1) {
+void Rational::set(int a1, int b1) {
 
     if (b1 == 0) {
         cerr << "Error: denominator cannot be 0." << endl;
         exit(1);
     }
- 
+
     if (a1 > b1) {
         a = a1 % b1;
         b = b1;
@@ -41,12 +41,12 @@ void rational::set(int a1, int b1) {
 }
 
 
-void rational::show() const {
+void Rational::show() const {
     cout << a << "/" << b << endl;
 }
 
 
-void rational::reduce() {
+void Rational::reduce() {
 
     int gcd = 1;
     for (int i = 1; i <= a && i <= b; ++i) {
