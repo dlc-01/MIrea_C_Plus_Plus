@@ -3,9 +3,9 @@
 #define MIREA_CPP_PRACTIC_RATIONAL_H
 
 
-class rational {
+class Rational {
 public:
-    rational(int a1 = 0, int b1 = 1);
+    Rational(int a1 = 0, int b1 = 1);
     void set(int a1, int b1);
     void show() const;
 private:
