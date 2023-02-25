@@ -1,6 +1,6 @@
 
-#ifndef MIREA_CPP_PRACTIC_RATIONAL_H
-#define MIREA_CPP_PRACTIC_RATIONAL_H
+#ifndef RATIONAL_H
+#define RATIONAL_H
 
 
 class Rational {
