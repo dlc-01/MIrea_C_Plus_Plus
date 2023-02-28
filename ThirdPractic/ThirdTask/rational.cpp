@@ -5,12 +5,12 @@
 using namespace std;
 
 // constructor
-Rational::Rational(int a1, int b1) {
+rational::rational(int a1, int b1) {
     set(a1, b1);
 }
 
 // set values in the object
-void Rational::set(int a1, int b1) {
+void rational::set(int a1, int b1) {
     // check for denominator not equal to 0
     if (b1 == 0) {
         cerr << "Error: denominator cannot be 0." << endl;
@@ -29,61 +29,61 @@ void Rational::set(int a1, int b1) {
 }
 
 // output the fraction in the form of a/b
-void Rational::show() const {
+void rational::show() const {
     cout << a << "/" << b;
 }
 
 // addition operator
-Rational Rational::operator+(const Rational& r) const {
+rational rational::operator+(const rational& r) const {
     int new_a = a * r.b + b * r.a;
     int new_b = b * r.b;
-    Rational result(new_a, new_b);
+    rational result(new_a, new_b);
     result.reduce();
     return result;
 }
 
 // prefix increment operator
-Rational& Rational::operator++() {
+rational& rational::operator++() {
     a += b;
     reduce();
     return *this;
 }
 
 // equality operator
-bool Rational::operator==(const Rational& r) const {
+bool rational::operator==(const rational& r) const {
     return a == r.a && b == r.b;
 }
 
 // greater than operator
-bool Rational::operator>(const Rational& r) const {
+bool rational::operator>(const rational& r) const {
     return a * r.b > r.a * b;
 }
 
 // assignment operator
-Rational& Rational::operator=(const Rational& r) {
+rational& rational::operator=(const rational& r) {
     a = r.a;
     b = r.b;
     return *this;
 }
 
 // subtraction operator
-Rational operator-(const Rational& r1, const Rational& r2) {
+rational operator-(const rational& r1, const rational& r2) {
     int new_a = r1.a * r2.b - r2.a * r1.b;
     int new_b = r1.b * r2.b;
-    Rational result(new_a, new_b);
+    rational result(new_a, new_b);
     result.reduce();
     return result;
 }
 
 // reduce fraction
-void Rational::reduce() {
+void rational::reduce() {
     int g = gcd(a, b);
     a /= g;
     b /= g;
 }
 
 // greatest common divisor
-int Rational::gcd(int a, int b) const {
+int rational::gcd(int a, int b) const {
     if (b == 0) {
         return a;
     } else {
