@@ -1,21 +1,21 @@
 #ifndef RATIONAL_H
 #define RATIONAL_H
 
-class Rational {
+class rational {
 public:
-    Rational(int a1 = 0, int b1 = 1);
+    rational(int a1 = 0, int b1 = 1);
     void set(int a1, int b1);
     void show() const;
-    Rational operator+(const Rational& r) const;
-    Rational& operator++(); 
-    bool operator==(const Rational& r) const;
-    bool operator>(const Rational& r) const;
-    Rational& operator=(const Rational& r);
-    friend Rational operator-(const Rational& r1, const Rational& r2); 
+    rational operator+(const rational& r) const;
+    rational& operator++();
+    bool operator==(const rational& r) const;
+    bool operator>(const rational& r) const;
+    rational& operator=(const rational& r);
+    friend rational operator-(const rational& r1, const rational& r2);
 private:
     void reduce();
     int gcd(int a, int b) const;
-    int a, b; /
+    int a, b;
 };
 
-#endif 
+#endif // RATIONAL_H
