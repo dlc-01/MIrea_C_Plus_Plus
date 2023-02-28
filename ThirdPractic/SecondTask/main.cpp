@@ -5,7 +5,7 @@ int main() {
     int n;
     std::cout << "Enter number of fractions: ";
     std::cin >> n;
-    Rational *fractions = new Rational[n];
+    rational *fractions = new rational[n];
     for (int i = 0; i < n; ++i) {
         int a, b;
         std::cout << "Enter numerator and denominator for fraction " << i+1 << ": ";
