@@ -43,18 +43,9 @@ public:
 
 int main() {
     double a, b, c;
-    std::cin >> a >> b >> c;
-    eq2 equation1 (a, b, c);
-    std::cin >> a >> b >> c;
-    eq2 equation2 (a, b, c);
-
-
-    std::cout << "Equation 1: " << equation1.find_X() << std::endl;
-    std::cout << "Equation 2: " << equation2.find_X() << std::endl;
-
-    eq2 equation3 = equation1 + equation2;
-
-    std::cout << "Equation 3: " << equation3.find_X() << std::endl;
-
+    cin >> a >> b >> c;
+    eq2 exmpl(a, b, c);
+    exmpl.find_X();
+    cout << exmpl.find_Y(6);
     return 0;
 }
