@@ -1,5 +1,5 @@
-#ifndef INDUSTRIAL_PROGRAMMENT_PRACTIC_TYPE1_H
-#define INDUSTRIAL_PROGRAMMENT_PRACTIC_TYPE1_H
+#ifndef type1_h
+#define type1_h
 
 
 class type1 {
@@ -9,4 +9,4 @@ public:
 };
 
 
-#endif //INDUSTRIAL_PROGRAMMENT_PRACTIC_TYPE1_H
+#endif //type1_h

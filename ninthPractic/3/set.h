@@ -1,5 +1,5 @@
-#ifndef INDUSTRIAL_PROGRAMMENT_PRACTIC_SET_H
-#define INDUSTRIAL_PROGRAMMENT_PRACTIC_SET_H
+#ifndef set_h
+#define set_h
 
 template<typename Atype>
 class Set {
@@ -19,4 +19,4 @@ public:
 
 
 
-#endif
+#endif //set_h

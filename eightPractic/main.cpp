@@ -20,3 +20,5 @@ int main() {
     EquationType4.Get_answer();
     return 0;
 }
+
+// Добавлены два класса для решений уравнений типов 3 и 4

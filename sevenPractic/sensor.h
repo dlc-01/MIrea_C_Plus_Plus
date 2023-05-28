@@ -1,5 +1,5 @@
-#ifndef INDUSTRIAL_PROGRAMMENT_PRACTIC_SENSOR_H
-#define INDUSTRIAL_PROGRAMMENT_PRACTIC_SENSOR_H
+#ifndef sencor_h
+#define sencor_h
 
 
 class sensor {
@@ -13,4 +13,4 @@ public:
 };
 
 
-#endif //INDUSTRIAL_PROGRAMMENT_PRACTIC_SENSOR_H
+#endif //sencor_h
