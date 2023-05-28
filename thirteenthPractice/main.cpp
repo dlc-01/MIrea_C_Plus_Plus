@@ -54,7 +54,7 @@ public:
         double k = ((-1) * C) / A;
         if (k>=0) {
             double x1 = sqrt(k);
-            double x2 = sqrt(k) * (-1);
+            double x2 = sqrt(k )* (-1);
             cout << "Roots of the equation: " << endl << "X1 = " << x1 << endl << "X2 = " << x2 << endl;
         }
         else {
@@ -69,10 +69,10 @@ public:
             cout << "There are no roots by method of selection" << endl;
         }
         else {
-            double min = abs(0 - A *  pow(-20,2) - C);
+            double min = abs(0 - A * pow(-20,2) - C);
             double x = -20;
             for (double i = -20; i < 20.01; i = i + 0.01) {
-                double temp = abs(0 - A * (i) * (i) - C);
+                double temp = abs(0 - A* pow(i,2) - C);
                 if (temp<min) {
                     min = temp;
                     x = i;
@@ -121,18 +121,18 @@ public:
         C = c1;
     }
     void Get_answer () {
-        double D = B * B - 4 * A * C;
+        double D = B*B - 4*A*C;
         if (D<0) {
             cout << "The equation has no valid roots" << endl;
         }
         else {
             if (D == 0) {
-                double x = ((-1) * B - sqrt(D)) / (2 * A);
+                double x = ((-1) * B-sqrt(D)) / (2 * A);
                 cout << "The root of the equation: " << x << endl;
             }
             else {
                 double x1 = ((-1) * B - sqrt(D)) / (2 * A);
-                double x2 = ((-1) *B + sqrt(D)) / (2 * A);
+                double x2 = ((-1) * B + sqrt(D)) / (2 * A);
                 cout << "Roots of the equation: " << endl;
                 cout << "X1 = " << x1 << endl << "X2 = " << x2 << endl;
             }
@@ -142,15 +142,15 @@ public:
         cout << "Equation " << A << "*x^2 + " << B << "*x + " << C << " = 0"<< endl;
     }
     void Get_answer_podbor() {
-        double D = B * B - 4 * A * C;
+        double D = B*B - 4*A*C;
         if (D<0) {
             cout << "The equation has no valid roots" << endl;
         }
         else {
-            double min = abs(0 - A *  pow(-20,2) - B * (-20) - C);
+            double min = abs(0 - A * pow(-20, 2) - B * (-20) - C);
             double x = -20;
-            for (double i = -20; i < 20.01; i = i + 0.01) {
-                double temp = abs(0 - A * (i) * (i) - B * i - C);
+            for (double i = -20; i< 20.01; i=i+0.01) {
+                double temp = abs(0 - A * pow(i,2) - B * i - C);
                 if (temp<min) {
                     min = temp;
                     x = i;
@@ -193,12 +193,12 @@ public:
         cout << "Equation " << A << "*x^2 + " << B << "*x = 0 " << endl;
     }
     void Get_answer_podbor() {
-        double min = abs(0 - A * pow(-20,2) - B * (-20));
+        double min = abs(0 - A * pow(-20, 2) - B * (-20));
         double x = -20;
-        for (double i = -20; i < 20.01; i = i + 0.01) {
+        for (double i = - 20; i < 20.01; i = i + 0.01) {
             if (i!=0) {
-                double temp = abs(0 - A * pow(i,2) - B * (i));
-                if (temp<min) {
+                double temp = abs(0 - A * pow(i, 2) - B * (i));
+                if (temp < min) {
                     min = temp;
                     x = i;
                 }
@@ -208,42 +208,52 @@ public:
     }
 };
 
-int main() {
+int main()
+{
+    double A, B, C;
+    cout << "Enter the coefficients of the 1st equation A, B, and C, separated by a space: " << endl;
+    cin >> A >> B >> C;
     type1 eq1;
+    cout << "Enter the coefficients of the 2nd equation A, B, and C with a space: " << endl;
+    cin >> A >> B >> C;
+    type2 eq2(B);
+    cout << "Enter the coefficients of the 3rd equation A, B, and C with a space: " << endl;
+    cin >> A >> B >> C;
+    type3 eq3(C);
+    cout << "Enter the coefficients of the 4th equation A, B, and C with a space: " << endl;
+    cin >> A >> B >> C;
+    type4 eq4(A,C);
+    cout << "Enter the coefficients of the 5th equation A, B, and C with a space: " << endl;
+    cin >> A >> B >> C;
+    type5 eq5(B,C);
+    cout << "Enter the coefficients of the 6th equation A, B, and C with a space: " << endl;
+    cin >> A >> B >> C;
+    type6 eq6(A,B,C);
+    cout << "Enter the coefficients of the 7th equation A, B, and C with a space: " << endl;
+    cin >> A >> B >> C;
+    type7 eq7(B);
+    cout << "Enter the coefficients of the 8th equation A, B, and C, separated by a space: " << endl;
+    cin >> A >> B >> C;
+    type8 eq8(A,B);
     eq1.show();
     eq1.Get_answer();
-
-    type2 eq2(3);
     eq2.show();
     eq2.Get_answer();
-
-    type3 eq3(3);
     eq3.show();
     eq3.Get_answer();
-
-    type4 eq4(2, 6);
     eq4.show();
     eq4.Get_answer();
     eq4.Get_answer_podbor();
-
-    type5 eq5(4, 5);
     eq5.show();
     eq5.Get_answer();
     eq5.Get_answer_podbor();
-
-    type6 eq6(2, -1, 2);
     eq6.show();
     eq6.Get_answer();
     eq6.Get_answer_podbor();
-
-    type7 eq7(7);
     eq7.show();
     eq7.Get_answer();
-
-    type8 eq8(4, 10);
     eq8.show();
     eq8.Get_answer();
     eq8.Get_answer_podbor();
-
     return 0;
 }
